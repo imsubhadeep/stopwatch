@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="Tailwind/browser@4.js"></script>
+</head>
+<body class="bg-[url(assets/img/bg.png)] min-h-screen flex flex-col">
+    <header class="w-full flex justify-center items-center">
+        <nav class="navbar bg-white h-[50px] w-[80%] m-4 rounded-xl bg-white/70 backdrop-blur-xl backdrop-saturate-150 border-b border-white/40">
+            <ul class="navbarItems px-6 flex gap-10 h-full justify-between items-center">
+                <li><span>Coding Competition 2026</span></li>
+
+                <li>
+                    <div class="flex gap-2 bg-gray-300 rounded-sm">
+                        <button class="bg-black text-white p-2 rounded-sm">Countdown</button>
+                    </div>
+                </li>
+
+                <li>
+                    <span id="date"></span> <span> | </span> <span id="time"></span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="flex-1 w-full flex flex-col justify-center items-center">
+        <div id="container" class="bg-white w-[50%] h-[400px] flex justify-center items-center rounded-2xl bg-white/70 backdrop-blur-xl backdrop-saturate-180 border-b border-white/40">
+            <div id="countdownMode" class="w-full h-full flex flex-col justify-center items-center">
+                <div class="flex justify-center items-center">
+                    <i class="fa-regular fa-alarm-clock text-[50px]"></i>
+                </div>
+
+                <div class="flex justify-center items-center mt-4">
+                    <span class="tracking-[10px]">COUNTDOWN</span>
+                </div>
+
+                <div class="flex justify-center items-center">
+                    <div id="countdownDisplay" class="text-[70px] my-6">00:00:00</div>
+                </div>
+
+                <div class="buttonsArea w-full flex gap-7 justify-center items-center py-7">
+                    <button id="startBtn" class="text-white bg-black w-[100px] h-12 rounded-[8px]">Start</button>
+                    <button id="stopBtn" class="text-white bg-black w-[100px] h-12 rounded-[8px]">Stop</button>
+                    <button id="setBtn" class="text-white bg-black w-[100px] h-12 rounded-[8px]">Set</button>
+                    <input type="text" id="numInput" min="1" placeholder="Minutes" class="hidden w-[100px] h-12 border-3 border-transparent border-b-black text-center outline-none">
+                    <button id="countdownBtn" class="hidden text-[30px] relative bottom-1" aria-label="Set countdown">→</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full flex justify-center items-center">
+        <div class="bg-white w-[80%] h-[40px] flex justify-center items-center mb-4 rounded-xl bg-white/70 backdrop-blur-xl backdrop-saturate-150 border-b border-white/40">
+            Copyright © 2026 · Subhadeep Samanta
+        </div>
+    </footer>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
